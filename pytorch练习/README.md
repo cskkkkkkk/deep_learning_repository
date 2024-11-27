@@ -2,6 +2,7 @@
 1、线性回归
 (1) 生成训练数据，数据为带有服从-0.5 到 0.5 的均匀分布噪声的正弦函数，代码如下：
 
+![image](https://github.com/user-attachments/assets/a2627f5e-0811-483c-8556-24977dfc1391)
 
 
 
