@@ -1,0 +1,50 @@
+INFO - 11/11/24 16:19:02 - 0:00:00 - ============ Initialized logger ============
+INFO - 11/11/24 16:19:02 - 0:00:00 - batch_size: 16
+                                     cfg: ./config/default.yaml
+                                     ckpt: None
+                                     data_path: ['datasets/NER_data/conll2003']
+                                     dropout: 0
+                                     dump_path: experiments/default/1
+                                     early_stop: 3
+                                     entity_list: []
+                                     evaluate_interval: 1
+                                     exp_id: 1
+                                     exp_name: default
+                                     gamma: 0.2
+                                     hidden_dim: 768
+                                     info_per_epochs: 1
+                                     is_load_ckpt_if_exists: False
+                                     logger_filename: train.log
+                                     lr: 1e-3
+                                     model_name: bert-base-cased
+                                     mu: 0.9
+                                     save_per_epochs: 0
+                                     schedule: (3, 6)
+                                     seed: None
+                                     training_epochs: 10
+                                     weight_decay: 0.0005
+INFO - 11/11/24 16:19:02 - 0:00:00 - The experiment will be stored in experiments/default/1
+                                     
+INFO - 11/11/24 16:19:02 - 0:00:00 - {'exp_name': 'default', 'logger_filename': 'train.log', 'dump_path': 'experiments/default/1', 'exp_id': '1', 'seed': None, 'model_name': 'bert-base-cased', 'is_load_ckpt_if_exists': False, 'ckpt': None, 'dropout': 0, 'hidden_dim': 768, 'data_path': ['datasets/NER_data/conll2003'], 'entity_list': [], 'batch_size': 16, 'lr': '1e-3', 'mu': 0.9, 'weight_decay': 0.0005, 'info_per_epochs': 1, 'save_per_epochs': 0, 'training_epochs': 10, 'schedule': '(3, 6)', 'gamma': 0.2, 'early_stop': 3, 'evaluate_interval': 1, 'cfg': './config/default.yaml'}
+INFO - 11/11/24 16:19:02 - 0:00:00 - Loading the default entity list from domain conll2003...
+INFO - 11/11/24 16:19:02 - 0:00:00 - label_list = ['O', 'B-misc', 'I-misc', 'B-location', 'I-location', 'B-person', 'I-person', 'B-organisation', 'I-organisation']
+INFO - 11/11/24 16:19:02 - 0:00:00 - Load training set data
+INFO - 11/11/24 16:19:06 - 0:00:04 - Load development set data
+INFO - 11/11/24 16:19:07 - 0:00:04 - Load test set data
+INFO - 11/11/24 16:19:08 - 0:00:05 - train size: 14040; dev size 3249; test size: 3452;
+DEBUG - 11/11/24 16:19:08 - 0:00:06 - https://hf-mirror.com:443 "HEAD /bert-base-cased/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG - 11/11/24 16:19:09 - 0:00:07 - https://hf-mirror.com:443 "HEAD /bert-base-cased/resolve/main/model.safetensors HTTP/1.1" 302 0
+DEBUG - 11/11/24 16:19:09 - 0:00:07 - Attempting to acquire lock 140676586871632 on /home/cs/.cache/huggingface/hub/.locks/models--bert-base-cased/1d8bdcee6021e2c25f0325e84889b61c2eb26b843eef5659c247af138d64f050.lock
+DEBUG - 11/11/24 16:19:09 - 0:00:07 - Lock 140676586871632 acquired on /home/cs/.cache/huggingface/hub/.locks/models--bert-base-cased/1d8bdcee6021e2c25f0325e84889b61c2eb26b843eef5659c247af138d64f050.lock
+DEBUG - 11/11/24 16:19:09 - 0:00:07 - Starting new HTTPS connection (1): cdn-lfs.hf-mirror.com:443
+DEBUG - 11/11/24 16:19:10 - 0:00:08 - https://cdn-lfs.hf-mirror.com:443 "GET /bert-base-cased/1d8bdcee6021e2c25f0325e84889b61c2eb26b843eef5659c247af138d64f050?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&Expires=1731571374&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMTU3MTM3NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9iZXJ0LWJhc2UtY2FzZWQvMWQ4YmRjZWU2MDIxZTJjMjVmMDMyNWU4NDg4OWI2MWMyZWIyNmI4NDNlZWY1NjU5YzI0N2FmMTM4ZDY0ZjA1MD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=hqz2TqxAkCkzJ81ew29bBcyzVALfyniXXgq~Zr53avWEzEY3uYdaN~FU7upF~hVuD0FJEISs0eDl13ep07XNwu1b6lSACS7BDMUJqzuGjabXACEliR4d8-FIBFoM1k5Eqmql-9bkSx2YyP2jQzE9UIiTXiJ1OqxLQ~zGmgOFAX0vWHOunVW8dwPm9InmJ3JiOJkjou-cRlug6XO--wAgKqwby~z2BVeKUucY-Yk4KMa1tDDxGxmVwi6yFosSRiS5PZhNHleWDsSuxaObzIsmt9PVpSP2ZLXlvC6p7h6ahbP-McDHP-eKyWPGwSyj8OOZvut9J2x-8pYybttAiwYdVg__&Key-Pair-Id=K3RPWS32NSSJCE HTTP/1.1" 200 435755784
+DEBUG - 11/11/24 16:19:54 - 0:00:52 - Attempting to release lock 140676586871632 on /home/cs/.cache/huggingface/hub/.locks/models--bert-base-cased/1d8bdcee6021e2c25f0325e84889b61c2eb26b843eef5659c247af138d64f050.lock
+DEBUG - 11/11/24 16:19:54 - 0:00:52 - Lock 140676586871632 released on /home/cs/.cache/huggingface/hub/.locks/models--bert-base-cased/1d8bdcee6021e2c25f0325e84889b61c2eb26b843eef5659c247af138d64f050.lock
+INFO - 11/11/24 16:20:17 - 0:01:15 - Training ...
+INFO - 11/11/24 16:20:17 - 0:01:15 - Initial lr is [0.001]
+INFO - 11/11/24 16:20:17 - 0:01:15 - ============== epoch 1 ==============
+INFO - 11/11/24 16:23:02 - 0:04:00 - Epoch 1, Step 878: Loss=0.2770, Training_acc=32.15%
+INFO - 11/11/24 16:23:49 - 0:04:47 - Epoch 1, Step 878: Dev_f1=84.1784, Dev_f1_each_class={'location': 87.54, 'misc': 68.5, 'organisation': 76.56, 'person': 94.58}
+INFO - 11/11/24 16:23:49 - 0:04:47 - Find better model!!
+INFO - 11/11/24 16:23:52 - 0:04:49 - Best model has been saved to experiments/default/1/best_finetune_domain_conll2003.pth
+INFO - 11/11/24 16:23:52 - 0:04:49 - ============== epoch 2 ==============
